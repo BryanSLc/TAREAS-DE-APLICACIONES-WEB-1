@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cff6fc;
+    margin: 0;
+    width: 100;
+}
+
+header {
+    background-color: #fabc6c;
+    padding: 1px 50;
+}
+
+.navbar {
+    display: flex;
+    justify-content: left;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 10;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f7e9d8;
+    color: #131414;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 2px solid #fabc6c;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #ffd9a7;
+    color: #131212;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Ajusta el alto mínimo del main */
+}
+
+.container {
+    background: #f8f6f2;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 400px; /* Aumenta el ancho del contenedor */
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.form-group input, .form-group select {
+    width: 95%;
+    padding: 10px; /* Aumenta el padding */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group input[type="submit"] {
+    background-color: #fabc6c;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    font-size: 16px; /* Aumenta el tamaño del texto */
+    padding: 10px;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #ffd9a7;
+}
+
+footer {
+    background-color: #fabc6c;
+    color: #020202;
+    text-align: left; /* Ancla el texto a la izquierda */
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px; /* Aumenta el tamaño del texto */
+    margin-top: auto;
+}

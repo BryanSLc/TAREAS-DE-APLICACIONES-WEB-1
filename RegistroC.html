@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Clientes</title>
+    <link rel="stylesheet" href="Estriloregistro.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#login" class="nav-button">Iniciar sesión</a></li>
+                <li><a href="#services" class="nav-button">Servicios</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h2><strong>Registro de Cliente</strong></h2>
+            <form id="registration-form" action="/submit" method="post">
+             
+                <div class="form-group">
+                    <strong><label for="nombre">Nombre:</label></strong>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+             
+                <div class="form-group">
+                    <strong><label for="apellido">Apellido:</label></strong>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+            
+                <div class="form-group">
+                    <strong><label for="cedula">Cédula:</label></strong>
+                    <input type="text" id="cedula" name="cedula" required>
+                </div>
+
+                <div class="form-group">
+                    <strong><label for="direccion">Dirección:</label></strong>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+              
+                <div class="form-group">
+                    <strong><label for="email">Correo Electrónico:</label></strong>
+                    <input type="email" id="email" name="email" required>
+                </div>
+        
+                <div class="form-group">
+                    <strong><label for="fecha-nacimiento">Fecha de Nacimiento:</label></strong>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                </div>
+
+                <div class="form-group">
+                    <strong><label for="ciudad">Ciudad:</label></strong>
+                    <input type="text" id="ciudad" name="ciudad" required>
+                </div>
+   
+                <div class="form-group">
+                    <input type="submit" value="Registrar">
+                </div>
+            </form>
+            
+            <div id="confirmation-message" class="confirmation-message" style="display:none;">
+                <strong><p>¡El formulario se ha enviado correctamente!</p></strong>
+            </div>
+        </div>
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2024 Todos los derechos reservados.</p>
+    </footer>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var form = document.getElementById('registration-form');
+            var confirmationMessage = document.getElementById('confirmation-message');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                confirmationMessage.style.display = 'block';
+                setTimeout(function() {
+                    confirmationMessage.style.display = 'none';
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>
