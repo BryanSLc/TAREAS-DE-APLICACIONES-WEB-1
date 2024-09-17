@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practicascript.css">
+    <title>Operaciones con 2 números</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Operaciones matematicas</h1>
+
+        <label for="numero">Ingrese un numero número:</label>
+        <input type="number" id="numero" required>
+
+        <label for="numero2">Ingrese otro numero número:</label>
+        <input type="number" id="numero2" required>
+
+        <button onclick="realizarOperaciones()">Resolver    </button>
+
+        <div class="resultados" id="resultados"></div>
+    </div>
+
+    <script>
+        function realizarOperaciones() {
+            var numero = parseFloat(document.getElementById('numero').value);
+            var numero2 = parseFloat(document.getElementById('numero2').value);
+            var resultadosDiv = document.getElementById('resultados');
+            resultadosDiv.innerHTML = '';
+            for (var i = 1; i <= 5; i++) {
+                var resultado = '';
+                switch (i) {
+                    case 1:
+                        resultado = "Iteración " + i + ": Suma de " + numero + " + " + numero2 + " = " + (numero + numero2);
+                        break;
+                    case 2:
+                        resultado = "Iteración " + i + ": Resta de " + numero + " - " + numero2 + " = " + (numero - numero2);
+                        break;
+                    case 3:
+                        resultado = "Iteración " + i + ": Multiplicación de " + numero + " * " + numero2 + " = " + (numero * numero2);
+                        break;
+                    case 4:
+                        // Evitar la división por cero
+                        if (numero2 !== 0) {
+                            resultado = "Iteración " + i + ": División de " + numero + " / " + numero2 + " = " + (numero / numero2);
+                        } else {
+                            resultado = "Iteración " + i + ": No se puede dividir entre 0";
+                        }
+                        break;
+                    case 5:
+                        if (numero2 !== 0) {
+                            resultado = "Iteración " + i + ": Módulo de " + numero + " % " + numero2 + " = " + (numero % numero2);
+                        } else {
+                            resultado = "Iteración " + i + ": No se puede obtener el módulo con divisor 0";
+                        }
+                        break;
+                }
+                var resultadoDiv = document.createElement('div');
+                resultadoDiv.className = 'resultado';
+                resultadoDiv.textContent = resultado;
+                resultadosDiv.appendChild(resultadoDiv);
+            }
+        }
+    </script>
+
+</body>
+</html>
