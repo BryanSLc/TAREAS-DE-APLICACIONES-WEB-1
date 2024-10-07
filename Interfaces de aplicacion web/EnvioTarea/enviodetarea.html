@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio de tarea</title>
+    <link rel="stylesheet" href="enviodetarea.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <div class="empty-gray-bar"></div>
+
+    
+    <header class="top-bar">
+        <div class="logo">
+            <img src="https://cec.uleam.edu.ec/pluginfile.php/1/theme_klass/footerlogo/1714492023/logo_ULEAM_2017_horizontal.png" alt="Uleam logo">
+        </div>
+        <nav class="navbar">
+            <a href="#">General</a>
+            <a href="#">Inscripciones</a>
+            <a href="#">Recientes</a>
+            <a href="#">Mis cursos</a>
+            <a href="#">Calificación</a>
+            <i class="fas fa-bell"></i>
+        </nav>
+        <div class="perfil">
+            <a href="ruta_a_perfil.html">
+                <img src="https://lh3.googleusercontent.com/a/ACg8ocL20yqpHZyUpfF2CFsr_HiOfpYFRTxD2RNNBciE4hIQaiIOnXZ7=s288-c-no" alt="Foto del perfil" class="profile-img">
+            </a>
+        </div>
+    </header>
+
+    
+    <div class="task-section">
+       
+        <div class="task-description">
+            <h2>Tarea: <br> Realizar 10 ejercicios utilizando el movimiento rectilinio uniforme variado</h2>
+            <p>-Colocar caratula</p>
+            <p>-Adjuntar en archivo PDF</p>
+        </div>
+
+        
+        <div class="task-details">
+            <div class="task-info">
+                <p>Fecha de entrega: <strong>10/10/2024</strong></p>
+                <p>Estado de la entrega: <strong id="status">Enviado</strong></p>
+                <p>Calificación: <strong id="status">8</strong></p>
+            </div>
+            <div class="task-submit">
+                <button id="upload-btn">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sube tu archivo</h2>
+            <div class="drag-drop-area" id="drag-drop-area">
+                Arrastra y suelta el archivo aquí o
+                <label for="file-input" style="cursor: pointer;">haz clic para seleccionar uno</label>
+                <input type="file" id="file-input" class="file-input">
+            </div>
+            <button id="confirm-upload">Subir archivo</button>
+        </div>
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://cec.uleam.edu.ec/pluginfile.php/1/theme_klass/footerlogo/1714492023/logo_ULEAM_2017_horizontal.png" alt="Uleam logo">
+            </div>
+            <div class="contacto">
+                <p>Contáctanos: <br> Av. Circunvalación Vía a San Mateo <br> 
+                <i class="fas fa-envelope"></i> incidencias.diit@uleam.edu.ec</p>
+            </div>
+            <div class="social">
+                <p>Redes sociales</p>
+                <i class="fab fa-facebook"></i>
+            </div>
+        </div>
+    </footer>
+
+    
+    <div class="empty-gray-bar-footer"></div>
+
+    <script>
+        const uploadBtn = document.getElementById('upload-btn');
+        const modal = document.getElementById('myModal');
+        const closeBtn = document.getElementsByClassName('close')[0];
+        const dragDropArea = document.getElementById('drag-drop-area');
+        const fileInput = document.getElementById('file-input');
+        let selectedFile = null;
+
+        
+        uploadBtn.onclick = function() {
+            modal.style.display = "block";
+            if (selectedFile) {
+                dragDropArea.innerHTML = `Archivo: ${selectedFile.name} (Seleccionado)`;
+            }
+        }
+
+        
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        
+        dragDropArea.ondrop = function(event) {
+            event.preventDefault();
+            selectedFile = event.dataTransfer.files[0];
+            if (selectedFile) {
+                dragDropArea.innerHTML = `Archivo: ${selectedFile.name} (Arrastrado)`;
+            }
+        }
+
+        dragDropArea.ondragover = function(event) {
+            event.preventDefault();
+        }
+
+       
+        fileInput.onchange = function() {
+            selectedFile = fileInput.files[0];
+            if (selectedFile) {
+                dragDropArea.innerHTML = `Archivo: ${selectedFile.name} (Seleccionado)`;
+            }
+        }
+
+        
+        document.getElementById('confirm-upload').onclick = function() {
+            if (selectedFile) {
+                alert(`Archivo ${selectedFile.name} listo para subir.`);
+                modal.style.display = "none";
+            } else {
+                alert("Por favor, selecciona un archivo.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="empty-gray-bar"></div>
+    <body>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://cec.uleam.edu.ec/pluginfile.php/1/theme_klass/footerlogo/1714492023/logo_ULEAM_2017_horizontal.png" alt="Tu Logo" class="custom-logo"> <!-- Reemplaza con la ruta de tu logo -->
+            </div>
+            <div class="login-form">
+                <h2>Iniciar Sesión</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="username">Usuario:</label>
+                        <input type="text" id="username" name="username" required>
+                        <p id="usernameError" class="error-message"></p> 
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="password" required>
+                        <p id="passwordError" class="error-message"></p> 
+                    </div>
+                    <button type="submit">Iniciar Sesión</button>
+
+                    <p style="text-align: center; margin: 10px 0;">Accede con tu cuenta de:</p>
+                </form>
+                <button class="office-button">
+                    <img src="https://ck-officetechnologies.lu/wp-content/uploads/sites/2/2021/07/office-365-logo.png" alt="Office 365 Logo" class="office-logo"> <!-- Logo de Office 365 -->
+                </button>
+            </div>
+        </div>
+    </body>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://cec.uleam.edu.ec/pluginfile.php/1/theme_klass/footerlogo/1714492023/logo_ULEAM_2017_horizontal.png" alt="Uleam logo">
+            </div>
+            <div class="contacto">
+                <p>Contáctanos: <br> Av. Circunvalación Vía a San Mateo <br> 
+                <i class="fas fa-envelope"></i> incidencias.diit@uleam.edu.ec</p>
+            </div>
+            <div class="social">
+                <p>Redes sociales</p>
+                <i class="fab fa-facebook"></i>
+            </div>
+        </div>
+    </footer>
+    <div class="empty-gray-bar-footer"></div> 
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const usernameRegex = /^[a-zA-Z0-9]{3,15}$/; 
+            const passwordRegex = /^[a-zA-Z0-9@#$%^&+=]{6,20}$/; 
+            let isValid = true;
+            document.getElementById('usernameError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+            if (!usernameRegex.test(username)) {
+                document.getElementById('usernameError').textContent = 'Usuario incorrecto';
+                isValid = false;
+            }
+            if (!passwordRegex.test(password)) {
+                document.getElementById('passwordError').textContent = 'Contraseña incorrecta';
+                isValid = false;
+            }
+            if (isValid) {
+                alert('Iniciando sesión...'); 
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripciones</title>
+    <link rel="stylesheet" href="inscripciones.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="empty-gray-bar"></div>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="https://cec.uleam.edu.ec/pluginfile.php/1/theme_klass/footerlogo/1714492023/logo_ULEAM_2017_horizontal.png" alt="Uleam logo">
+        </div>
+        <nav class="navbar">
+            <a href="#">General</a>
+            <a href="#">Inscripciones</a>
+            <a href="#">Recientes</a>
+            <a href="#">Mis cursos</a>
+            <a href="#">Calificación</a>
+            <i class="fas fa-bell"></i>
+        </nav>
+        <div class="perfil">
+            <a href="ruta_a_perfil.html">
+                <img src="https://lh3.googleusercontent.com/a/ACg8ocL20yqpHZyUpfF2CFsr_HiOfpYFRTxD2RNNBciE4hIQaiIOnXZ7=s288-c-no" alt="Foto del perfil" class="profile-img">
+            </a>
+        </div>
+    </header>
+    <div class="course-container">
+        <a href="#" class="course-card color1" data-spots="35">
+            <i class="fa-solid fa-people-group"></i>
+            <h3>Física General</h3>
+            <button class="join-button">Unirse</button>
+            <p>Cupos disponibles: <span class="available-spots">35</span></p>
+            <div class="message"></div>
+        </a>
+        <a href="#" class="course-card color2" data-spots="0">
+            <h3>Matemáticas Discretas</h3>
+            <button class="join-button">Unirse</button>
+            <p>Cupos disponibles: <span class="available-spots">0</span></p>
+            <div class="message"></div>
+        </a>
+        <a href="#" class="course-card color3" data-spots="15">
+            <h3>Estadística y Probabilidad</h3>
+            <button class="join-button">Unirse</button>
+            <p>Cupos disponibles: <span class="available-spots">15</span></p>
+            <div class="message"></div>
+        </a>
+        <a href="#" class="course-card color4" data-spots="5">
+            <h3>Sistemas de Comunicaciones</h3>
+            <button class="join-button">Unirse</button>
+            <p>Cupos disponibles: <span class="available-spots">5</span></p>
+            <div class="message"></div>
+        </a>
+        <a href="#" class="course-card color5" data-spots="25">
+            <h3>Álgebra Lineal</h3>
+            <button class="join-button">Unirse</button>
+            <p>Cupos disponibles: <span class="available-spots">25</span></p>
+            <div class="message"></div>
+        </a>
+        <a href="#" class="course-card color6" data-spots="10">
+            <h3>Ingeniería de Requisitos</h3>
+            <button class="join-button">Unirse</button>
+            <p>Cupos disponibles: <span class="available-spots">10</span></p>
+            <div class="message"></div>
+        </a>
+        <a href="#" class="course-card color7" data-spots="0">
+            <h3>Estructura de Datos</h3>
+            <button class="join-button">Unirse</button>
+            <p>Cupos disponibles: <span class="available-spots">0</span></p>
+            <div class="message"></div>
+        </a>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://cec.uleam.edu.ec/pluginfile.php/1/theme_klass/footerlogo/1714492023/logo_ULEAM_2017_horizontal.png" alt="Uleam logo">
+            </div>
+            <div class="contacto">
+                <p>Contáctanos: <br> Av. Circunvalación Vía a San Mateo <br> 
+                <i class="fas fa-envelope"></i> incidencias.diit@uleam.edu.ec</p>
+            </div>
+            <div class="social">
+                <p>Redes sociales</p>
+                <i class="fab fa-facebook"></i>
+            </div>
+        </div>
+    </footer>
+    <div class="empty-gray-bar-footer"></div>
+    <script>
+        document.querySelectorAll('.join-button').forEach(button => {
+            button.addEventListener('click', function(event) {
+                const courseCard = event.target.closest('.course-card');
+                const availableSpots = parseInt(courseCard.getAttribute('data-spots'));
+                const messageDiv = courseCard.querySelector('.message');
+                if (availableSpots > 0) {
+                    const newSpots = availableSpots - 1;
+                    courseCard.setAttribute('data-spots', newSpots);
+                    courseCard.querySelector('.available-spots').textContent = newSpots;
+                    messageDiv.textContent = 'Te has inscrito exitosamente en ' + courseCard.querySelector('h3').textContent + '!';
+                    messageDiv.className = 'message success';
+                } else {
+                    messageDiv.textContent = 'Lo siento, no hay cupo disponible en ' + courseCard.querySelector('h3').textContent + '.';
+                    messageDiv.className = 'message';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

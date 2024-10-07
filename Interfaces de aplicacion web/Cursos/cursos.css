@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ebfded;
+}
+
+.empty-gray-bar, .empty-gray-bar-footer {
+    background-color: #5dc971;
+    height: 30px;
+}
+
+
+.top-bar {
+    background-color: #d4d0d0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.navbar {
+    display: relative;
+    flex-grow: 1;
+    justify-content: flex-start;
+    margin-left: 10px;
+}
+
+.navbar a {
+    margin: 0 50px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16 px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #5dc971;
+}
+
+.perfil a {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #5dc971;
+}
+
+
+.fa-bell {
+    color: #333;
+    font-size: 18px;
+    margin-left: 50px;
+}
+
+.fa-bell:hover {
+    color: #5dc971;
+}
+
+
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.course-card {
+    border-radius: 10px;
+    padding: 35px;
+    margin: 20px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.course-card h3 {
+    font-size: 18px;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+
+.color1 {
+    background-color: #B2EAAE; 
+}
+
+.color2 {
+    background-color: #EAD1DC; 
+}
+
+.color3 {
+    background-color: #B2CCE5; 
+}
+
+.color4 {
+    background-color: #EBD8B7; 
+}
+
+.color5 {
+    background-color: #dc99f7; 
+}
+
+.color6 {
+    background-color: #E3B1AF; 
+}
+
+.color7 {
+    background-color: #CED5E1; 
+}
+
+
+.footer {
+    background-color: #d4d0d0;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px 0;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.contacto p {
+    margin: 0;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social i {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social i:hover {
+    color: #5dc971;
+}

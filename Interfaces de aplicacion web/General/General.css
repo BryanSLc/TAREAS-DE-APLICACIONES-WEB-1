@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ebfded;
+}
+.empty-gray-bar,
+.empty-gray-bar-footer {
+    background-color: #5dc971;
+    height: 30px;
+}
+.top-bar {
+    background-color: #d4d0d0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+.logo img {
+    height: 60px;
+}
+.navbar {
+    display: relative;
+    flex-grow: 1;
+    justify-content: flex-start;
+    margin-left: 10px;
+}
+.navbar a {
+    margin: 0 50px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: #5dc971;
+}
+.perfil a {
+    display: flex;
+    align-items: center;
+}
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #5dc971;
+}
+.fa-bell {
+    color: #333;
+    font-size: 18px;
+    margin-left: 50px;
+}
+.fa-bell:hover {
+    color: #5dc971;
+}
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.logo-container img {
+    height: 200px;
+}
+.definition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px auto;
+    text-align: center;
+}
+.mission-vision {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.mission,
+.vision {
+    background-color: #5dc971;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+.mission h2,
+.vision h2 {
+    margin-bottom: 10px;
+    color: rgb(8, 8, 8);
+}
+.mission p,
+.vision p {
+    color: rgb(3, 3, 3);
+}
+.footer {
+    background-color: #d4d0d0;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    border-top: 0px solid #5dc971;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px 0;
+}
+.footer-logo img {
+    height: 50px;
+}
+.contacto p {
+    margin: 0;
+}
+.social {
+    display: flex;
+    align-items: center;
+}
+.social i {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s;
+}
+.social i:hover {
+    color: #5dc971;
+}

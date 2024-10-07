@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ebfded;
+}
+
+.empty-gray-bar, .empty-gray-bar-footer {
+    background-color: #5dc971;
+    height: 30px;
+}
+
+
+.top-bar {
+    background-color: #d4d0d0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.navbar {
+    display: relative;
+    flex-grow: 1;
+    justify-content: flex-start;
+    margin-left: 10px;
+}
+
+.navbar a {
+    margin: 0 50px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16 px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #5dc971;
+}
+
+.perfil a {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #5dc971;
+}
+
+
+.fa-bell {
+    color: #333;
+    font-size: 18px;
+    margin-left: 50px;
+}
+
+.fa-bell:hover {
+    color: #5dc971;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 20px;
+    width: 50%;
+    background-color: white;
+    border: 2px solid #85d671;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #5dc971;
+    margin-bottom: 20px;
+}
+
+
+.profile-details {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    width: 100%;
+}
+
+.profile-details p {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.profile-details strong {
+    font-weight: bold;
+    color: #000000;
+}
+
+
+
+
+.footer {
+    background-color: #d4d0d0;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px 0;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.contacto p {
+    margin: 0;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social i {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social i:hover {
+    color: #5dc971;
+}

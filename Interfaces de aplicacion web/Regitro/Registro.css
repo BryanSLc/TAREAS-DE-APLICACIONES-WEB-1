@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ebfded;
+}
+
+.empty-gray-bar, .empty-gray-bar-footer {
+    background-color: #5dc971;
+    height: 30px;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-left: 150px; 
+    margin-top: 40px; 
+    margin-bottom: 40px; 
+}
+
+.custom-logo {
+    height: 150px; 
+    margin-right: 200px; 
+}
+
+.register-form {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px; 
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 90%;
+    padding: 8px;
+    background-color: #a1e79a;
+    border: 1px solid #999999;
+    border-radius: 10px;
+}
+
+button {
+    width: 90%;
+    padding: 10px;
+    background-color: #5dc971;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #47a25a;
+}
+
+
+.captcha-container {
+    margin: 20px 0;
+    text-align: center;
+    background-color: #a1e79a;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+
+.footer {
+    background-color: #d4d0d0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    border-top: 0px solid #5dc971;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px 50px;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.contacto p {
+    margin: 0;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social i {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social i:hover {
+    color: #5dc971; 
+}
