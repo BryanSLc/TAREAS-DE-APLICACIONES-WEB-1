@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ebfded;
+}
+
+.empty-gray-bar, .empty-gray-bar-footer {
+    background-color: #5dc971;
+    height: 30px;
+}
+
+.top-bar {
+    background-color: #d4d0d0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.navbar {
+    display: relative;
+    flex-grow: 1;
+    justify-content: flex-start;
+    margin-left: 10px;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-button:hover {
+    color: #ffcc00; /* Cambio de color al pasar el ratón */
+}
+
+.navbar a {
+    margin: 0 50px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+    color: #5dc971; /* Color al pasar el ratón */
+    transform: scale(1.05); /* Aumenta el tamaño de la fuente */
+}
+
+.perfil a {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #5dc971;
+}
+
+.fa-bell {
+    color: #333;
+    font-size: 18px;
+    margin-left: 50px;
+}
+
+.fa-bell:hover {
+    color: #5dc971; /* Cambio de color al pasar el ratón */
+}
+
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.course-card {
+    border-radius: 10px;
+    padding: 35px;
+    margin: 20px;
+    text-align: center;
+    width: 250px;
+    background-color: #e6dada; /* Color de fondo de la tarjeta */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para tarjetas */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    position: relative;
+}
+
+.course-card h3 {
+    font-size: 18px;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra al hacer hover */
+    background-color: #e2f0d9; /* Cambio de color de fondo de la tarjeta */
+}
+
+.course-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.student-list {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(177, 243, 102, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 10;
+    width: calc(100% - 20px); /* Ajuste para no ir fuera de la tarjeta */
+}
+
+.course-card:hover .student-list {
+    display: block;
+}
+
+.color1 { background-color: #868686; }
+.color2 { background-color: #EAD1DC; }
+.color3 { background-color: #B2CCE5; }
+.color4 { background-color: #EBD8B7; }
+.color5 { background-color: #EBD8B7; }
+.color6 { background-color: #EBD8B7; }
+.color7 { background-color: #EBD8B7; }
+
+.progress-bar {
+    width: 100%;
+    background-color: #b9adad;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 15px;
+    margin-top: 10px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #5dc971;
+    transition: background-color 0.3s;
+}
+
+.progress:hover .progress {
+    background-color: #4CAF50; /* Cambio de color al pasar el ratón sobre la barra de progreso */
+}
+
+.progress-text {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.footer {
+    background-color: #d4d0d0;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px 0;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.contacto p {
+    margin: 0;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social i {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social i:hover {
+    color: #5dc971; /* Cambio de color al pasar el ratón sobre iconos sociales */
+}

@@ -1,0 +1,38 @@
+{
+    "inscripciones": [
+      {
+        "id": 1,
+        "nombre": "Juan Pérez",
+        "email": "e13155342824@live.uleam.edu.ec",
+        "curso": "Física General",
+        "fecha_inscripcion": "2024-11-09",
+        "estado": "Inscrito"
+      },
+      {
+        "id": 2,
+        "nombre": "Ana López",
+        "email": "e1315162824@live.uleam.edu.ec",
+        "curso": "Matemáticas Discretas",
+        "fecha_inscripcion": "2024-11-10",
+        "estado": "Inscrito"
+      },
+      {
+        "id": 3,
+        "nombre": "Carlos Sánchez",
+        "email": "e156342577@live.uleam.edu.ec",
+        "curso": "Estadística y Probabilidad",
+        "fecha_inscripcion": "2024-11-09",
+        "estado": "Pendiente"
+      },
+  
+      {
+        "id": 5,
+        "nombre": "Francia Tomala",
+        "email": "e2523262455@live.uleam.edu.ec",
+        "curso": "Sistemas electricos y electronicos",
+        "fecha_inscripcion": "2024-10-09",
+        "estado": "Inscrito"
+      }
+    ]
+  }
+  

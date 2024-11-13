@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cursos>
+    <curso id="fisica-general">
+        <estudiantes>
+            <estudiante>Juan Pérez</estudiante>
+            <estudiante>Maria López</estudiante>
+            <estudiante>Carlos Ramirez</estudiante>
+        </estudiantes>
+    </curso>
+    <curso id="matematicas-discretas">
+        <estudiantes>
+            <estudiante>Ana Torres</estudiante>
+            <estudiante>Pedro Sanchez</estudiante>
+        </estudiantes>
+    </curso>
+    <curso id="Calculo de una variable">
+        <estudiantes>
+            <estudiante>Juan Pérez</estudiante>
+            <estudiante>Maria López</estudiante>
+            <estudiante>Ana López</estudiante>
+        </estudiantes>
+    </curso>
+    <curso id="Quimica">
+        <estudiantes>
+            <estudiante>Juan Pérez</estudiante>
+            <estudiante>Ana López</estudiante>
+            <estudiante>Carlos Ramirez</estudiante>
+        </estudiantes>
+    </curso>
+    <curso id="Ingles">
+        <estudiantes>
+            <estudiante>Juan Pérez</estudiante>
+            <estudiante>Maria López</estudiante>
+            <estudiante>Ana López</estudiante>
+        </estudiantes>
+    </curso>
+    <curso id="Bases de datos">
+        <estudiantes>
+            <estudiante>Juan Pérez</estudiante>
+            <estudiante>Jefferson Santos</estudiante>
+            <estudiante>Carlos Ramirez</estudiante>
+        </estudiantes>
+    </curso>
+    <curso id="Programación">
+        <estudiantes>
+            <estudiante>Ana López</estudiante>
+            <estudiante>Maria López</estudiante>
+            <estudiante>Jefferson Santos</estudiante>
+        </estudiantes>
+    </curso>
+    
+</cursos>
