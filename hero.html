@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Interfaz</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos/Hero.css">
+</head>
+<body>
+
+  <header class="hero-header">
+    <div class="logo-container">
+      <img src="Imagenes/logo.png" alt="Logo">
+    </div>
+    <div class="header-icons">
+      
+      <div class="icon-wrapper">
+        <i class="fas fa-globe" title="Cambiar idioma" onclick="toggleLanguageMenu()"></i>
+        <ul class="language-dropdown" id="languageMenu">
+          <li data-lang="es" onclick="changeLanguage('es')">Español</li>
+          <li data-lang="en" onclick="changeLanguage('en')">English</li>
+          <li data-lang="fr" onclick="changeLanguage('fr')">Français</li>
+          <li data-lang="de" onclick="changeLanguage('de')">Deutsch</li>
+        </ul>
+      </div>
+  
+   
+      <div class="icon-wrapper">
+        <i class="fas fa-user-circle" title="Perfil" onclick="toggleProfileMenu()"></i>
+        <ul class="profile-dropdown" id="profileMenu">
+          <li id="login" onclick="redirectToLogin()">Iniciar Sesión</li>
+          <li id="register">Registrarse</li>
+        </ul>
+      </div>
+     
+      <div class="icon-wrapper">
+        <i class="fas fa-bars" title="Menú" onclick="toggleHamburgerMenu()"></i>
+        <ul class="hamburger-dropdown" id="hamburgerMenu">
+          <li><a href="#categorias">Categorías</a></li>
+          <li><a href="#acerca" id="aboutLink" onclick="redirectToAbout()">Acerca de</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+ 
+  <section class="hero-content">
+    <h1 class="hero-title" id="heroTitle">Bienvenido a Relto</h1>
+    <img src="https://www.comunidadbaratz.com/wp-content/uploads/Las-bibliotecas-publicas-no-paran-de-evolucionar-para-ofrecer-un-mejor-servicio-basado-en-la-necesidad-y-en-la-utilidad.jpg" alt="Imagen Principal" class="hero-image">
+    <p class="hero-description" id="heroDescription">
+      ¡Bienvenido a Relto! Plataforma de libros electrónicos que te llevarán a
+      descubrir nuevos mundos y aventuras. Explora nuestra colección de títulos y
+      encuentra tu próxima lectura de fantasía favorita.
+    </p>
+  </section>
+
+ 
+  <section class="categories-section" id="categorias">
+    <h2 class="section-title" id="categoriesTitle">Categorías de Libros</h2>
+    <div class="categories-container">
+     
+        <div class="category-card">
+            <img src="Imagenes/como_escribir_un_libro_de_fantasia_toma_nota_47621_orig.jpg" alt="Fantasía" class="category-image">
+            <p class="category-name" id="categoryFantasy">Fantasía</p>
+        </div>
+       
+        <div class="category-card">
+            <img src="Imagenes/opa.jpg" alt="Misterio" class="category-image">
+            <p class="category-name" id="categoryMystery">Misterio</p>
+        </div>
+        
+        <div class="category-card">
+            <img src="Imagenes/OIP.jpg" alt="Terror" class="category-image">
+            <p class="category-name" id="categoryHistorical">Terror</p>
+        </div>
+    </div>
+</section>
+
+  <footer class="custom-footer">
+    <div class="footer-section">
+      <p>© 2024 Entertainment</p>
+    </div>
+    <div class="footer-section">
+      <p>Nuestra página web brinda a todos los usuarios contenido en línea del mundo del entretenimiento.</p>
+    </div>
+    <div class="footer-section">
+      <p>Visita nuestras redes sociales.</p>
+      <div class="social-icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+  </footer>
+
+ 
+  <script src="HeroLanguage.js"></script>
+  <script src="Hero.js"></script>
+  <script>
+    
+    function redirectToLogin() {
+      window.location.href = "login.html"; 
+    }
+    function redirectToRegister() {
+      window.location.href = "Registro.html"; 
+    }
+
+    
+    document.getElementById("register").addEventListener("click", redirectToRegister);
+    
+    function redirectToAbout() {
+      window.location.href = "blankstate.html"; // Ruta al archivo "Estado en Blanco"
+    }
+  </script>
+</body>
+</html>
